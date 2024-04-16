@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+void sacarPromedio(int matriz[5][12]);
+
 int main ()
 {
 
@@ -25,6 +27,26 @@ srand(time(NULL));
         }
         printf("\n");
     }
+
+    sacarPromedio(matriz);
     
     return 0;
+}
+
+void sacarPromedio(int matriz[5][12])
+{
+    int total = 0;
+    float promedio;
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 12; j++)
+        {
+            total += matriz[i][j];
+        }
+        promedio = total/12;
+        printf("El promedio del anio %d es $%.2f \n", i+1, promedio);
+        total = 0;
+        
+    }
+    
 }
