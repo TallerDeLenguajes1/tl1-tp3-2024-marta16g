@@ -1,1 +1,1 @@
-printf("\n");
+cargarDatos(matriz);

@@ -2,14 +2,24 @@
 #include <stdlib.h>
 #include <time.h>
 
+void cargarDatos(int matriz[5][12]);
 void sacarPromedio(int matriz[5][12]);
 void sacarMinimoYMaximo(int matriz[5][12]);
 
 int main ()
 {
-
-srand(time(NULL));
+    srand(time(NULL));
     int matriz[5][12];
+    cargarDatos(matriz);
+    sacarPromedio(matriz);
+    sacarMinimoYMaximo(matriz);
+    
+    
+    return 0;
+}
+
+void cargarDatos(int matriz[5][12])
+{
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 12; j++)
@@ -28,11 +38,6 @@ srand(time(NULL));
         }
         printf("\n");
     }
-
-    sacarPromedio(matriz);
-    sacarMinimoYMaximo(matriz);
-    
-    return 0;
 }
 
 void sacarPromedio(int matriz[5][12])
